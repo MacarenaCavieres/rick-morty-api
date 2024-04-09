@@ -16,9 +16,13 @@ body {
     object-fit: cover;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .card img {
         border-bottom-right-radius: 5px;
         border-top-right-radius: 5px;
     }
+} */
+
+.textCircle {
+    list-style-type: none;
 }

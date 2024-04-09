@@ -2,6 +2,12 @@ const contenido = document.querySelector("#contenido");
 const template = document.querySelector("#template");
 const previous = document.querySelector("#previous");
 const next = document.querySelector("#next");
+// const human = document.querySelector("#human");
+// const alien = document.querySelector("#alien");
+// const others = document.querySelector("#others");
+// const alive = document.querySelector("#alive");
+// const dead = document.querySelector("#dead");
+// const unknown = document.querySelector("#unknown");
 const fragment = document.createDocumentFragment();
 
 let page = 1;
@@ -52,3 +58,24 @@ const pintarTarjeta = (data) => {
 };
 
 fetchApi();
+
+// ------------------------filtros----------------------------------
+
+filters.addEventListener("click", (e) => {
+    const tarjetas = document.querySelectorAll(".tarjetas");
+    const filter = e.target.value.toLowerCase().trim();
+
+    tarjetas.forEach((item) => {
+        const status = item.querySelector(".status");
+        const specie = status.textContent.split("-")[0].toLowerCase().trim();
+        if (e.target.checked && filter === specie) {
+            item.style.display = "flex";
+        } else {
+            item.style.display = "none";
+        }
+
+        if (e.target.checked && filter === "all") {
+            item.style.display = "flex";
+        }
+    });
+});

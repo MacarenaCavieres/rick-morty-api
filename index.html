@@ -18,30 +18,57 @@
         />
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
-    <body class="container text-center">
-        <nav class="nav flex-column">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </nav>
-
-        <h1 class="my-4 text-white">RICK AND MORTY</h1>
-        <main class="container text-start mx-auto">
-            <div class="row justify-content-center" id="contenido"></div>
+    <body>
+        <main class="container-fluid text-white">
+            <div class="row flex-nowrap">
+                <div class="bg-dark col-auto col-md-2 min-vh-100 d-flex flex-column justify-content-between">
+                    <div class="bg-dark p-2">
+                        <ul class="nav nav-pills flex-column" id="filters">
+                            <li class="nav-item mt-5">Filters</li>
+                            <ul class="ps-3">
+                                <li class="nav-item pt-3">Species</li>
+                                <li class="textCircle">
+                                    <input type="checkbox" id="human" value="human" />Human
+                                </li>
+                                <li class="textCircle">
+                                    <input type="checkbox" id="alien" value="alien" />Alien
+                                </li>
+                                <li class="textCircle"><input type="checkbox" id="all" value="all" />All</li>
+                            </ul>
+                            <ul class="ps-3">
+                                <li class="nav-item pt-3">Status</li>
+                                <li class="textCircle">
+                                    <input type="checkbox" id="alive" value="alive" />Alive
+                                </li>
+                                <li class="textCircle">
+                                    <input type="checkbox" id="dead" value="dead" />Dead
+                                </li>
+                                <li class="textCircle">
+                                    <input type="checkbox" id="unknown" value="unknown" />Unknown
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <section class="col-md-10 text-center" id="main">
+                    <h1 class="my-4 text-white">RICK AND MORTY</h1>
+                    <div class="container text-start mx-auto">
+                        <div class="row justify-content-center" id="contenido"></div>
+                    </div>
+                    <section class="my-5">
+                        <button type="button" class="btn btn-dark w-25 fondo" id="previous">Previous</button>
+                        <button type="button" class="btn btn-dark w-25 fondo" id="next">Next</button>
+                    </section>
+                </section>
+            </div>
         </main>
 
-        <section class="my-5">
-            <button type="button" class="btn btn-dark w-25 fondo" id="previous">Previous</button>
-            <button type="button" class="btn btn-dark w-25 fondo" id="next">Next</button>
-        </section>
-
         <template id="template">
-            <article class="col-12 col-md-6">
+            <article class="col-10 col-md-5 tarjetas">
                 <div class="card text-bg-secondary mb-3 fondo">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="..." class="img-fluid rounded-start" alt="..." />
+                            <img src="..." class="img-fluid rounded-start rounded-end" alt="..." />
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
