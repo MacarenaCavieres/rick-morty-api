@@ -27,13 +27,13 @@
                             <li class="nav-item mt-5">Filters</li>
                             <ul class="ps-3">
                                 <li class="nav-item pt-3">Species</li>
+
                                 <li class="textCircle">
                                     <input type="checkbox" id="human" value="human" />Human
                                 </li>
                                 <li class="textCircle">
                                     <input type="checkbox" id="alien" value="alien" />Alien
                                 </li>
-                                <li class="textCircle"><input type="checkbox" id="all" value="all" />All</li>
                             </ul>
                             <ul class="ps-3">
                                 <li class="nav-item pt-3">Status</li>
@@ -47,10 +47,22 @@
                                     <input type="checkbox" id="unknown" value="unknown" />Unknown
                                 </li>
                             </ul>
+                            <ul class="ps-3">
+                                <li class="nav-item pt-3">Gender</li>
+                                <li class="textCircle">
+                                    <input type="checkbox" id="male" value="male" />Male
+                                </li>
+                                <li class="textCircle">
+                                    <input type="checkbox" id="female" value="female" />Female
+                                </li>
+                                <li class="textCircle">
+                                    <input type="checkbox" id="unknownGender" value="unknownGender" />Unknown
+                                </li>
+                            </ul>
                         </ul>
                     </div>
                 </div>
-                <section class="col-md-10 text-center" id="main">
+                <section class="col-12 col-md-10 text-center" id="main">
                     <h1 class="my-4 text-white">RICK AND MORTY</h1>
                     <div class="container text-start mx-auto">
                         <div class="row justify-content-center" id="contenido"></div>
@@ -64,7 +76,7 @@
         </main>
 
         <template id="template">
-            <article class="col-10 col-md-5 tarjetas">
+            <article class="col-10 col-md-6 tarjetas">
                 <div class="card text-bg-secondary mb-3 fondo">
                     <div class="row g-0">
                         <div class="col-md-4">
