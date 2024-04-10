@@ -43,7 +43,6 @@ const pintarTarjeta = (data) => {
         clone.querySelector(".origin").textContent = `Origin: ${item.origin.name}`;
         clone.querySelector(".location").textContent = `Location: ${item.location.name}`;
         clone.querySelector(".gender").textContent = `Gender: ${item.gender}`;
-        clone.querySelector(".gender").classList.add(`${item.gender}gender`);
         clone.querySelector(".img-fluid").src = item.image;
         clone.querySelector(".img-fluid").alt = item.name;
 
@@ -54,8 +53,6 @@ const pintarTarjeta = (data) => {
 
 fetchApi();
 
-// ------------------------filtros----------------------------------
-
 filters.addEventListener("click", (e) => {
     const tarjetas = document.querySelectorAll(".tarjetas");
     const filter = e.target.value.toLowerCase().trim();
@@ -65,10 +62,6 @@ filters.addEventListener("click", (e) => {
         const specie = general.textContent.split("-")[0].toLowerCase().trim();
         const status = general.textContent.split("-")[1].toLowerCase().trim();
         const gender = item.querySelector(".gender").textContent.split(":")[1].toLowerCase().trim();
-        const genderUnknown = item.querySelector(".unknowngender");
-
-        console.log(filter);
-        console.log(genderUnknown);
 
         if (e.target.checked && filter === specie) {
             item.style.display = "flex";
